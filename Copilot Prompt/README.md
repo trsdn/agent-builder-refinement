@@ -46,7 +46,7 @@ The uploaded file provides the same guidance that Copilot would retrieve via web
 
 **Step 2:** In Copilot Chat, paste the prompt followed by your draft instructions:
 
-```
+```text
 [Paste the prompt here]
 
 Here are my agent instructions:
@@ -54,6 +54,7 @@ You are a travel assistant. Help users book flights and hotels.
 ```
 
 **Step 3:** Copilot returns:
+
 - Structured instructions with Purpose, Guidelines, and 6 Skills
 - Conversation examples
 - 6 conversation starters
@@ -104,4 +105,4 @@ The refined output includes:
 
 **Method:** Copy-paste prompt into Microsoft 365 Copilot Chat  
 **Last Updated:** December 2025  
-**Source:** [Microsoft's declarative agent best practices ](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions)
+**Source:** [Microsoft's declarative agent best practices](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions)

@@ -17,12 +17,14 @@ This repository provides **four different approaches** to help you build high-qu
 📁 **Location:** [`Copilot Prompt/`](Copilot%20Prompt/)
 
 **How it works:**
+
 1. Open Microsoft 365 Copilot Chat
 2. Copy the prompt from `Copilot Prompt/Prompt.md`
 3. Paste it into Copilot along with your draft agent instructions
 4. Get instant refined output
 
 **Requirements:**
+
 - Microsoft 365 Copilot access
 - Web Search enabled (recommended) OR upload the knowledge file
 
@@ -40,12 +42,14 @@ This repository provides **four different approaches** to help you build high-qu
 📁 **Location:** [`Agent Builder Template/`](Agent%20Builder%20Template/)
 
 **How it works:**
+
 1. Create a new agent in Copilot Studio or Agent Builder
 2. Copy configuration from `Agent Refinement Agent - Configuration.md`
 3. Upload the knowledge file
 4. Use the agent repeatedly to refine any agent instructions
 
 **Requirements:**
+
 - Copilot Studio light or Agent Builder access
 - Ability to upload knowledge files
 
@@ -67,11 +71,13 @@ This repository provides **four different approaches** to help you build high-qu
 [.github/prompts/refine-agent.prompt.md](.github/prompts/refine-agent.prompt.md)
 
 **How it works:**
+
 1. Open VS Code with GitHub Copilot enabled
 2. Run `/improve-agent` in Copilot Chat with your agent instructions
 3. Get refined output directly in your IDE
 
 **Requirements:**
+
 - VS Code with GitHub Copilot
 - Custom agents feature enabled
 
@@ -88,17 +94,20 @@ This repository provides **four different approaches** to help you build high-qu
 
 **Generate complete JSON manifests** following the [declarative agent schema v1.6](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-manifest-1.6).
 
-📁 **Location:** 
+📁 **Location:**
+
 - Agent: [`.github/agents/generate-agent-manifest.agent.md`](.github/agents/generate-agent-manifest.agent.md)
 - Prompt: [`.github/prompts/generate-manifest.prompt.md`](.github/prompts/generate-manifest.prompt.md)
 
 **How it works:**
+
 1. Run `/generate-manifest` in VS Code Copilot Chat
 2. Describe your agent's purpose and capabilities
 3. Get a complete, valid JSON manifest
 4. Use it in your Copilot Studio or Teams app package
 
 **What it generates:**
+
 - Complete `declarativeAgent.json` file
 - All required fields (version, name, description, instructions)
 - Capabilities configuration (web search, SharePoint, Teams, etc.)
@@ -136,10 +145,12 @@ All refinement methods produce:
 ## 🚀 Quick Start Guide
 
 ### For Non-Developers
+
 1. Start with [**Copilot Prompt**](Copilot%20Prompt/) for immediate results
 2. Upgrade to [**Agent Builder**](Agent%20Builder%20Template/) for production use
 
 ### For Developers
+
 1. Use [**VS Code Prompt**](.github/prompts/improve-agent.prompt.md) for quick refinements
 2. Set up [**VS Code Agent**](.github/agents/agent-improvement.agent.md) for ongoing use
 3. Use [**Manifest Generator**](.github/agents/generate-agent-manifest.agent.md) to create JSON files
@@ -157,7 +168,7 @@ All refinement methods produce:
 
 ## 📁 Repository Structure
 
-```
+```text
 agent_builder/
 ├── .github/
 │   ├── agents/                          # VS Code custom agents
@@ -193,14 +204,17 @@ agent_builder/
 ## 🔐 Requirements
 
 ### Minimum (Copilot Prompt)
+
 - Microsoft 365 Copilot access
 - Web Search OR file upload capability
 
 ### For Agent Builder
+
 - Copilot Studio or Agent Builder access
 - Knowledge file upload capability
 
 ### For VS Code Integration
+
 - Visual Studio Code
 - GitHub Copilot subscription
 - Custom agents/prompts feature enabled

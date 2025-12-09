@@ -42,12 +42,14 @@ Perfect for:
 ### Example Usage
 
 **You:**
-```
+
+```text
 Rewrite my Prompt: You are a travel assistant. Help users book flights and hotels.
 ```
 
 **Agent:**
 Returns a complete, structured instruction set with:
+
 - Clear Purpose statement
 - Detailed Guidelines
 - 6 specific Skills (e.g., "Search Available Flights", "Validate Booking Details", etc.)
@@ -96,4 +98,4 @@ When using this agent:
 **Last Updated:** December 2025  
 
 This template follows Microsoft's guidance and best practices for Microsoft 365 Copilot declarative agents.
-**Source:** [Microsoft's declarative agent best practices ](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions)
+**Source:** [Microsoft's declarative agent best practices](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions)
