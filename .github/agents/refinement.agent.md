@@ -1,7 +1,7 @@
 ---
 description: Improve and refine declarative agent instructions based on Microsoft best practices
 name: Refinement_Agent
-tools: ['fetch', 'search', 'usages']
+tools: ['read/readFile', 'search', 'web/fetch', 'agent']
 ---
 
 # Agent Improvement Instructions
