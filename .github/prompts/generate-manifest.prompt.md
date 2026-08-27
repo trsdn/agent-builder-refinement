@@ -11,6 +11,7 @@ tools: ['fetch', 'search']
 Generate a complete declarative agent JSON manifest (v1.6) based on your requirements.
 
 Provide details about your agent:
+
 - **Purpose**: What should the agent do?
 - **Capabilities**: What data sources or skills does it need? (web search, SharePoint, Teams, email, etc.)
 - **Instructions**: Key behaviors, workflows, or guidelines

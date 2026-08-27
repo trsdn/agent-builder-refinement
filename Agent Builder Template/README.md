@@ -59,7 +59,7 @@ Returns a complete, structured instruction set with:
 ## Files Included
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | `Agent Refinement Agent - Configuration.md` | Complete agent configuration for copy-paste into Agent Builder |
 | `Write effective instructions for declarative agents.md` | Microsoft's official guidance from [learn.microsoft.com](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions) (upload as knowledge) |
 | `README.md` | This documentation |

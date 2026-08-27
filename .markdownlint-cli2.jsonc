@@ -1,0 +1,17 @@
+{
+  // Markdown lint settings for a documentation-and-templates repository.
+  // See https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+  "config": {
+    "default": true,
+    // These files are long-form prose and reference material copied from
+    // Microsoft Learn. Hard-wrapping them would make them harder to diff and
+    // harder to paste into Copilot, so line length is not enforced.
+    "MD013": false,
+    // A Keep a Changelog file repeats "Added"/"Changed"/"Fixed" under every
+    // release, so only flag duplicate headings that share the same parent.
+    "MD024": { "siblings_only": true }
+  },
+  "gitignore": true,
+  "globs": ["**/*.md"],
+  "ignores": [".git/**", "node_modules/**"]
+}

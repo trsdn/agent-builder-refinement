@@ -73,7 +73,7 @@ Assistant: [example response]
 2. **Second:** Create a table of **6 conversation starters** (one per skill):
 
 | Title | Prompt |
-|-------|--------|
+| ------- | -------- |
 | [Unique title] | [Imperative statement, not a question] |
 
 ## Constraints
