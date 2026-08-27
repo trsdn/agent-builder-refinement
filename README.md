@@ -66,14 +66,14 @@ This repository provides **four different approaches** to help you build high-qu
 
 📁 **Location:**
 
-[.github/agents/agent-improvement.agent.md](.github/agents/agent-improvement.agent.md)
+[.github/agents/refinement.agent.md](.github/agents/refinement.agent.md)
 
 [.github/prompts/refine-agent.prompt.md](.github/prompts/refine-agent.prompt.md)
 
 **How it works:**
 
 1. Open VS Code with GitHub Copilot enabled
-2. Run `/improve-agent` in Copilot Chat with your agent instructions
+2. Run `/refine-agent` in Copilot Chat with your agent instructions
 3. Get refined output directly in your IDE
 
 **Requirements:**
@@ -120,7 +120,7 @@ This repository provides **four different approaches** to help you build high-qu
 ## 📋 Comparison Table
 
 | Method | Setup Required | Reusable | Best For | Platform |
-|--------|----------------|----------|----------|----------|
+| ------ | -------------- | -------- | -------- | -------- |
 | **Copilot Prompt** | None | No | Quick refinements | M365 Copilot Chat |
 | **Agent Builder** | Medium | Yes | Production use | Copilot Studio Light |
 | **VS Code Agent** | Low | Yes | Developers | VS Code + GitHub Copilot |
@@ -151,8 +151,8 @@ All refinement methods produce:
 
 ### For Developers
 
-1. Use [**VS Code Prompt**](.github/prompts/improve-agent.prompt.md) for quick refinements
-2. Set up [**VS Code Agent**](.github/agents/agent-improvement.agent.md) for ongoing use
+1. Use [**VS Code Prompt**](.github/prompts/refine-agent.prompt.md) for quick refinements
+2. Set up [**VS Code Agent**](.github/agents/refinement.agent.md) for ongoing use
 3. Use [**Manifest Generator**](.github/agents/generate-agent-manifest.agent.md) to create JSON files
 
 ---
@@ -169,23 +169,31 @@ All refinement methods produce:
 ## 📁 Repository Structure
 
 ```text
-agent_builder/
+agent-builder-refinement/
 ├── .github/
-│   ├── agents/                          # VS Code custom agents
-│   │   ├── agent-improvement.agent.md   # Agent refinement expert
-│   │   └── generate-agent-manifest.agent.md  # Manifest generator
-│   └── prompts/                         # VS Code prompt files
-│       ├── improve-agent.prompt.md      # Quick refinement prompt
-│       └── generate-manifest.prompt.md  # Manifest generation prompt
-├── Agent Builder Template/              # Copilot Studio Light setup
+│   ├── agents/                              # VS Code custom agents
+│   │   ├── refinement.agent.md              # Agent refinement expert
+│   │   └── generate-agent-manifest.agent.md # Manifest generator
+│   ├── prompts/                             # VS Code prompt files
+│   │   ├── refine-agent.prompt.md           # Quick refinement prompt
+│   │   └── generate-manifest.prompt.md      # Manifest generation prompt
+│   ├── workflows/                           # CI and release automation
+│   └── dependabot.yml                       # GitHub Actions update schedule
+├── Agent Builder Template/                  # Copilot Studio Light setup
 │   ├── Agent Refinement Agent - Configuration.md
 │   ├── Write effective instructions for declarative agents.md
 │   └── README.md
-├── Copilot Prompt/                      # M365 Copilot Chat prompt
+├── Copilot Prompt/                          # M365 Copilot Chat prompt
 │   ├── Prompt.md
 │   ├── Write effective instructions for declarative agents.md
 │   └── README.md
-└── README.md                            # This file
+├── scripts/                                 # Documentation checks
+│   ├── validate_docs.py
+│   └── extract_release_notes.py
+├── AGENTS.md                                # Conventions for coding agents
+├── CHANGELOG.md
+├── LICENSE
+└── README.md                                # This file
 ```
 
 ---
@@ -225,14 +233,28 @@ agent_builder/
 
 Contributions welcome! This toolkit is based on Microsoft's official guidance and evolves with the declarative agent schema.
 
+Before opening a pull request, read [AGENTS.md](AGENTS.md) and run the same two checks CI runs:
+
+```bash
+npx --yes markdownlint-cli2@0.23.2   # Markdown lint
+python3 scripts/validate_docs.py     # template front matter + relative links
+```
+
 ---
 
 ## 📄 License
 
-This toolkit follows Microsoft's guidance and best practices for Microsoft 365 Copilot declarative agents.
+Released under the [MIT License](LICENSE).
+
+The guidance in this toolkit is based on Microsoft's public documentation for
+Microsoft 365 Copilot declarative agents. The two copies of *Write effective
+instructions for declarative agents* are reproduced from
+[Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions)
+and remain subject to Microsoft's terms.
 
 ---
 
-**Last Updated:** December 2025  
+**Changes:** see [CHANGELOG.md](CHANGELOG.md)  
+**Contributing:** see [AGENTS.md](AGENTS.md) for repository conventions and checks  
 **Schema Version:** v1.6  
 **Platforms:** Microsoft 365 Copilot, Copilot Studio Light, GitHub Copilot (VS Code)

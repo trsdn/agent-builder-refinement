@@ -35,7 +35,7 @@ The uploaded file provides the same guidance that Copilot would retrieve via web
 ## Files Included
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | `Prompt.md` | The refinement prompt - copy and paste this into Copilot |
 | `Write effective instructions for declarative agents.md` | Microsoft's official guidance from [learn.microsoft.com](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/declarative-agent-instructions) - upload if web search is not available |
 | `README.md` | This documentation |
@@ -75,7 +75,7 @@ The refined output includes:
 ## When to Use This vs. Agent Builder Template
 
 | Use This (Copilot Prompt) | Use Agent Builder Template |
-|---------------------------|---------------------------|
+| --------------------------- | --------------------------- |
 | Quick, one-time refinement | Reusable refinement agent |
 | Ad-hoc improvements | Standardized team process |
 | No agent setup needed | Consistent agent quality |

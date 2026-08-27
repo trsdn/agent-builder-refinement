@@ -1,0 +1,45 @@
+# Publishes a GitHub Release when a "v*" tag is pushed.
+#
+# This repository ships Markdown templates, not a package, so there is nothing
+# to upload to npm, PyPI or any other registry. The release is the tagged
+# snapshot of the templates plus the notes taken from CHANGELOG.md.
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      # Fails the job when the tag has no matching CHANGELOG.md section, so a
+      # release can never go out with empty or invented notes.
+      # Deliberately not piped into `tee`: the default runner shell is `bash -e`
+      # without `pipefail`, which would swallow a non-zero exit from the script.
+      - name: Extract release notes from CHANGELOG.md
+        run: |
+          python scripts/extract_release_notes.py "${GITHUB_REF_NAME}" > release-notes.md
+          cat release-notes.md
+
+      - name: Publish GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${GITHUB_REF_NAME}" \
+            --title "${GITHUB_REF_NAME}" \
+            --notes-file release-notes.md \
+            --verify-tag

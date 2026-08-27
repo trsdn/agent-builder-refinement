@@ -116,5 +116,5 @@ Currently no capabilities are configured.
 ## Suggested Prompts Starter
 
 | Title | Text |
-|-------|------|
+| ------- | ------ |
 | Rewrite Prompt | Rewrite my Prompt: [Prompt] |

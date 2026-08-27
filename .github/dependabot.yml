@@ -1,0 +1,18 @@
+# GitHub Actions is the only dependency ecosystem in this repository.
+#
+# There is no package manifest of any kind here - no package.json,
+# pyproject.toml, requirements.txt, Cargo.toml or go.mod - so npm, pip, cargo
+# and gomod entries would have nothing to resolve and are deliberately omitted.
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Europe/Berlin
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: ci
