@@ -138,3 +138,10 @@ cut by moving the `Unreleased` entries into a new `## [x.y.z] - YYYY-MM-DD`
 section and pushing a matching `vx.y.z` tag; `.github/workflows/release.yml` then
 publishes a GitHub Release using exactly that section as the notes. A tag with no
 matching changelog section fails the release job on purpose.
+
+### Dependency and vulnerability triage
+
+The repository owner, [@trsdn](https://github.com/trsdn), reviews Dependabot
+pull requests and Dependabot vulnerability alerts. Review alerts promptly,
+prioritize critical and high-severity findings, and merge dependency updates only
+after the CI checks pass.
